@@ -1,0 +1,64 @@
+" ##  Vundle plugin init
+set nocompatible | filetype off | set rtp+=~/.vim/bundle/Vundle.vim | call vundle#begin() | Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Townk/vim-autoclose'
+Plugin 'webastien/vim-folding'
+Plugin 'stephpy/vim-yaml'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" Display
+set title
+set number
+set ruler
+set wrap
+set scrolloff=5		  " lines around cursor
+set showcmd
+set showmatch
+set background=dark
+colorscheme solarized
+let g:airline_solarized_bg='dark'
+
+" -- Search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" -- Beep
+set visualbell
+set noerrorbells
+
+" Spaces/Tabs
+set expandtab "Use spaces instead of tabs
+set shiftwidth=2
+set tabstop=2
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
+
+"" Indentation guides
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+
+syntax enable
+filetype on
+filetype plugin indent on
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=.git,.svn

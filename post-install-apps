@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if type "apm" > /dev/null; then
+  # Atom plugins
+  package_list=(
+    "docblockr"
+    "editorconfig"
+    "highlight-bad-chars"
+    "minimap"
+    "minimap-cursorline"
+    "minimap-find-and-replace"
+    "highlight-selected"
+    "minimap-highlight-selected"
+    "minimap-codeglance"
+    "file-icons"
+    "language-diff"
+    "hyperclick"
+    "split-diff"
+    "git-split-diff-hyperclick"
+    "minimap-split-diff"
+    "markdown-preview-plus"
+    "markdown-preview-plus-opener"
+  )
+
+  for package in ${package_list[@]}; do
+    if [ ! -d ~/.atom/packages/$package ]; then
+      apm install $package
+    else
+      apm upgrade $package
+    fi
+  done
+fi
+
+# FinderPath
+if [ ! -d /Applications/FinderPath.app ]; then
+  curl -o FinderPath.zip -s https://bahoom.com/finderpath/0.9.7/FinderPath.zip && unzip -n -qq FinderPath.zip -d /Applications/ && rm -rf FinderPath.zip
+fi

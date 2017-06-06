@@ -8,6 +8,8 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Townk/vim-autoclose'
 Plugin 'webastien/vim-folding'
 Plugin 'stephpy/vim-yaml'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -34,7 +36,11 @@ set showcmd
 set showmatch
 set background=dark
 colorscheme solarized
-let g:airline_solarized_bg='dark'
+" Airline conf
+set laststatus=2
+let g:airline_theme='powerlineish'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " -- Search
 set ignorecase

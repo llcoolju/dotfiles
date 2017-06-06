@@ -40,10 +40,8 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   fi
 done
 
-# Symlink Git config files
-if [ ! -e "${ZDOTDIR:-$HOME}/.gitconfig" ]; then
-  ln -s "${ZDOTDIR:-$HOME}/dotfiles/git/gitconfig" "${ZDOTDIR:-$HOME}/.gitconfig"
-fi
+# Include
+git config --global include.path "dotfiles/git/gitconfig"
 
 # Symlink editorconfig
 if [ ! -e "${ZDOTDIR:-$HOME}/.editorconfig" ]; then

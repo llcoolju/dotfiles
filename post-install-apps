@@ -30,6 +30,7 @@ if type "apm" > /dev/null; then
   )
 
   for package in ${package_list[@]}; do
+    echo "$package"
     if [ ! -d ~/.atom/packages/$package ]; then
       apm install $package
     else

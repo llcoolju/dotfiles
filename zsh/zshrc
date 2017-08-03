@@ -15,3 +15,9 @@ fi
 
 # Customize to your needs...
 alias vi='vim'
+
+# Java & Android studion env variables
+export JAVA_HOME="`/usr/libexec/java_home -v '1.8*'`"
+export PATH=${JAVA_HOME}/bin:$PATH
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"

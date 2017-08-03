@@ -25,6 +25,8 @@ if type "apm" > /dev/null; then
     "linter-ui-default"
     "linter"
     "atom-typescript"
+    "language-docker"
+    "language-twig"
   )
 
   for package in ${package_list[@]}; do

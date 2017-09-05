@@ -27,6 +27,8 @@ if type "apm" > /dev/null; then
     "atom-typescript"
     "language-docker"
     "language-twig"
+    "atom-autocomplete-php"
+    "atom-symfony2"
   )
 
   for package in ${package_list[@]}; do

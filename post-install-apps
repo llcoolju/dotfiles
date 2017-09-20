@@ -36,7 +36,7 @@ if type "apm" > /dev/null; then
     if [ ! -d ~/.atom/packages/$package ]; then
       apm install $package
     else
-      apm upgrade $package
+      apm upgrade $package --no-confirm
     fi
   done
 fi

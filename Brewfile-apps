@@ -1,6 +1,7 @@
 tap "caskroom/cask"
 tap "caskroom/versions"
 cask "android-studio"
+cask "anki"
 cask "atom"
 cask "chromium"
 cask "cyberduck"

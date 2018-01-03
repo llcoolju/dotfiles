@@ -12,19 +12,11 @@ if [ ! -d "${ZDOTDIR:-$HOME}/.vim" ]; then
 fi
 vim -E -s -c "source ~/.vimrc" -c "PluginClean" -c "PluginInstall" -c "PluginUpdate" -c "qa!"
 
-# Get Prezto
+# Get Prezto including Powerlevel9k ZSH theme
 if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 else
   cd "${ZDOTDIR:-$HOME}/.zprezto" && git pull && git submodule update --init --recursive
-fi
-
-# Get Powerlevel9k ZSH theme
-if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/external/powerlevel9k" ]; then
-  git clone https://github.com/bhilburn/powerlevel9k.git  "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/external/powerlevel9k"
-  ln -s "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/external/powerlevel9k/powerlevel9k.zsh-theme" "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/prompt_powerlevel9k_setup"
-else
-  cd "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/external/powerlevel9k" && git pull && git submodule update --init --recursive
 fi
 
 # Symlink custom zsh config files

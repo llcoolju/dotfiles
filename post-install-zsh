@@ -10,7 +10,7 @@ if [ ! -d "${ZDOTDIR:-$HOME}/.vim" ]; then
   mkdir -p "${ZDOTDIR:-$HOME}/.vim/bundle"
   git clone https://github.com/VundleVim/Vundle.vim.git "${ZDOTDIR:-$HOME}/.vim/bundle/Vundle.vim"
 fi
-vim -E -s -c "source ~/.vimrc" -c "PluginClean" -c "PluginInstall" -c "PluginUpdate" -c "qa!"
+#vim -E -s -c "source ~/.vimrc" -c "PluginClean" -c "PluginInstall" -c "PluginUpdate" -c "qa!"
 
 # Get Prezto including Powerlevel9k ZSH theme
 if [ ! -d "${ZDOTDIR:-$HOME}/.zprezto" ]; then

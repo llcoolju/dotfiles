@@ -24,3 +24,6 @@ export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
 
 # added by Miniconda3 installer
 export PATH="/Users/julien/miniconda3/bin:$PATH"
+
+# added node v6
+export PATH="/usr/local/opt/node@6/bin:$PATH"

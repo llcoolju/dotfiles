@@ -27,3 +27,6 @@ export PATH="/Users/julien/miniconda3/bin:$PATH"
 
 # added node v6
 export PATH="/usr/local/opt/node@6/bin:$PATH"
+
+# public IP
+alias wanip='dig @resolver1.opendns.com ANY myip.opendns.com +short'
